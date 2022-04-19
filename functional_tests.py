@@ -19,7 +19,7 @@ class NewVisitorTest(unittest.TestCase): #(1)
         self.fail('Finish the test!') #(5)
 
 if __name__ == '__main__': #(6)
-    unittest.main(warnings='ignore') #(7)
+    unittest.main(warnings='ignore') #7
 # She is invited to enter a to-do item straight away
 
 # She types "Buy peacock feathers" into a text box (Edith's hobby
