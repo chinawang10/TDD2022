@@ -5,14 +5,19 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import WebDriverException
 import time
+import os
 
 MAX_WAIT = 10
 class NewVisitorTest(StaticLiveServerTestCase): #(1)
     
     def setUp(self): #(3)
         self.browser = webdriver.Chrome()
-
+        #staging_server = os.environ.get('STAGING_SERVER')
+        #if staging_server:
+            #self.live_server_url = 'http://'+staging_server
+        self.live_server_url = 'http://106.14.115.184'
     def tearDown(self): #(3)
+        self.browser.refresh()
         self.browser.quit()
     
     def wait_for_row_in_list_table(self, row_text):
