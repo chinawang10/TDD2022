@@ -1,1 +1,2 @@
-django==2.1.7
+django==2.1.7File STDIN:
+gunicorn==20.1.0
